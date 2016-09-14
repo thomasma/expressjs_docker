@@ -1,0 +1,3 @@
+Real simple express app that echos back the text after the hostname. For example a call to http://localhost/sometext will return "hello there sometext"
+
+This sample is so simple and absolutely usless. But its a perfect hello world to test out my Docker Swarm cluster on two Raspberry Pi 3 boards.
