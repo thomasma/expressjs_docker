@@ -1,3 +1,5 @@
-Real simple express app that echos back the text after the hostname. For example a call to http://localhost/sometext will return "hello there sometext"
+Real simple express app that prints some text back. Really useless example on its own, but I use this to bootstrap my testing of Kubernetes and Istio. 
 
-This sample is simple and absolutely usless. But its a perfect hello world to test out my Docker Swarm cluster on two Raspberry Pi 3 boards.
+node basicexpresshello.js
+curl http://localhost
+

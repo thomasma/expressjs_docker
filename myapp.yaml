@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: myapp
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myapp-v1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myapp
+        version: myapp-v1
+    spec:
+      containers:
+      - name: myapp-v1
+        image: mattazoid/hello:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: myapp-v2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myapp
+        version: myapp-v2
+    spec:
+      containers:
+      - name: myapp-v2
+        image: mattazoid/hello:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

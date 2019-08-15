@@ -1,19 +1,11 @@
-// ===============================================================
-// BASIC EXPRESS WEB APPLICATION
-// ===============================================================
+const express = require('express')
+const app = express()
+const port = 80
+const msg = 'Hello Blue World!\n';
 
-// express
-var express = require('express');
-var app = express();
-
-// console for logging
-var console = require('console');
-
-// function to say hello
-app.get('/:name', function(req, resp) {
-   resp.send('hello there ' + req.params.name);
+app.get('/', function (req, res) {
+  console.log(msg);
+  res.send(msg);
 });
 
-//start server
-app.listen(3000);
-console.log('Server running at http://hostname:3000/');
+app.listen(port, () => console.log(`app listening on port ${port}!`))

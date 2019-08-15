@@ -1,8 +1,8 @@
 {
-  "name":"basicexpressapp",
-  "version":"0.0.1",
-  "dependencies":{
-      "express":"",
-      "console":""
+  "name": "basicexpressapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "",
+    "console": ""
   }
 }
